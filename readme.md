@@ -55,7 +55,7 @@ Design and build a marketplace where producers can sell their produce to commerc
 
 ## Preliminary User Stories
 
-![User Stories 1/3](./app/assets/images/readme/userstories13.png "User Stories 1/3") ![User Stories 2/3](./app/assets/images/readme/userstories23.png "User Stories 2/3") ![User Stories 3/3](./app/assets/images/readme/userstories33.png "User Stories 3/3")
+![User Stories 1/3](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/userstories13.png "User Stories 1/3") ![User Stories 2/3](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/userstories23.png "User Stories 2/3") ![User Stories 3/3](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/userstories33.png "User Stories 3/3")
 ***
 ## Detailed User Stories
 
@@ -119,19 +119,19 @@ Design and build a marketplace where producers can sell their produce to commerc
 
 Below is the original workflow diagram.  This is how I originally intended the final site to look and feel when navigating.  When the website is finalised, an updated workflow will be introduced.
 
-![Workflow Diagram](./app/assets/images/readme/workflow.png "Workflow Diagram")
+![Workflow Diagram](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/workflow.png "Workflow Diagram")
 
 # Style Guide
 
 Colours and Fonts that were selected for use in this project are shown below.
 
-![Font Scheme](./app/assets/images/readme/fontchoice.png "Font Scheme")
+![Font Scheme](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/fontchoice.png "Font Scheme")
 
 Looking at the top line, we have 'Bevan', which is a nice, crisp font family which will be implemented across all my headings, menu's and titles.  It's stand out appearance gives off an original look that draws the users attention towards it.  As my marketplace is focussing on natural produce from primary producers and growers - I felt this font was inkeeping with that target.
 
 I then wanted to pair it with a clean, easy to read body text.  I chose 'Pontana Sans' for this.
 
-![Colour Scheme](./app/assets/images/readme/colourchoice.png "Colour Scheme")
+![Colour Scheme](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/colourchoice.png "Colour Scheme")
 
 Like with the font choice, I wanted to ensure the natural feel fell through to the colour scheme too.  This is why I've gone with shades of green for my content and content-holders and then baby blue to colour my background.
 
@@ -139,4 +139,4 @@ Like with the font choice, I wanted to ensure the natural feel fell through to t
 
 # Entity Relationship Diagram (ERD)
 
-![ERD](./app/assets/images/readme/erd.png "ERD")
+![ERD](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/erd.png "ERD")
