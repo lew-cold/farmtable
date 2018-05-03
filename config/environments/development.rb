@@ -61,15 +61,9 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.delivery_method = :smtp
-
-config.action_mailer.smtp_settings = {
-address: "smtp.1and1.com",
-port: 25,
-domain: ENV[“YORK_DOMAIN”],
-authentication: “plain”,
-enable_starttls_auto: true,
-user_name: ENV[“YORK_USERNAME”],
-password: ENV[“YORK_PASSWORD”]
+  config.action_mailer.delivery_method = :mailgun
+  config.action_mailer.mailgun_settings = {
+		REMOVED,
+		REMOVED
 }
 end
