@@ -36,6 +36,7 @@ gem 'carrierwave'
 gem 'fog-aws'
 gem 'dotenv-rails'
 gem 'mailgun-rails'
+# gem 'rest-client'
 # gem 'foreman'
 
 group :development, :test do
