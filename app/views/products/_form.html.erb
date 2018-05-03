@@ -36,7 +36,10 @@
     <%= form.text_field :category %>
   </div>
 
-  <%# <%= form.hidden_field :user %> %>
+  <div class="field">
+    <%= form.label :product_img %>
+    <%= form.file_field :product_img %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
