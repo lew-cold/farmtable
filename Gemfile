@@ -35,6 +35,9 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'dotenv-rails'
+gem 'mailgun-rails'
+# gem 'rest-client'
+# gem 'foreman'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
