@@ -61,7 +61,6 @@ Rails.application.configure do
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.raise_delivery_errors = true
-<<<<<<< HEAD
   config.action_mailer.delivery_method = :smtp
 
 config.action_mailer.smtp_settings = {
@@ -76,11 +75,3 @@ password: ENV[“GMAIL_PASSWORD”]
 
 
 end
-=======
-  config.action_mailer.delivery_method = :mailgun
-  config.action_mailer.mailgun_settings = {
-		api_key: ENV['MAILGUN_API'],
-		domain: ENV['MAILGUN_DOMAIN']
-}
-end
->>>>>>> mailgun
