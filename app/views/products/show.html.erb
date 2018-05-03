@@ -25,5 +25,12 @@
   <%= @product.category %>
 </p>
 
+<p>
+<strong>Product Image:</strong>
+  <% if @product.product_img? %>
+      <%= image_tag @product.product_img.url %>
+    <% end %>
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>

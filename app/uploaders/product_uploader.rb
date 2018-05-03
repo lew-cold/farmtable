@@ -4,8 +4,8 @@ class ProductUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage ENV['CARRIERWAVE_STORAGE'].to_sym
-  # storage :fog
+  # storage ENV['CARRIERWAVE_STORAGE'].to_sym
+  storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
