@@ -1,0 +1,65 @@
+  <header role="banner">
+
+<!--This is a fixed nav bar for desktop viewing-->
+
+      <div class="container">
+        <div class="logo">
+          <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Farm_to_Table.png" alt="Farm To Table Logo" title="Logo">
+          <div class="search">
+            <%= form_tag(products_path, :method => "get", id: "search-form") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+            <%= submit_tag "Search", :name => nil %>
+            <% end %>
+      	  </div>
+        </div>
+        <nav class="menu" role="navigation">
+          <a href="#toppage">Home</a>
+          <a href="#aboutme">Products</a>
+          <a href="#timelinehead">Message</a>
+          <a href="#skills">Profile</a>
+          <a href="#projects">Support</a>        
+          <% if user_signed_in? %>
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "devise" %>        
+          <% else %>
+            <%= link_to "Login", new_user_session_path, class: "devise" %>  
+          <% end %>
+        </nav>
+      </div>
+
+<!--This is a fixed burger nav bar for optimal viewing on mobile devices-->
+<!--The menu design has been sourced from Erik Terwan https://codepen.io/erikterwan/pen/EVzeRP-->
+
+<div class="mobnav">
+
+<nav role="navigation">
+
+  <div id="menuToggle">
+   
+    <input type="checkbox"/>
+    <span></span>
+    <span></span>
+    <span></span>
+    
+    <ul id="menu">
+        <li><a href="#toppage">Home</a></li>
+        <li><a href="#aboutme">About</a></li>
+        <li><a href="#timelinehead">Timeline</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contactme">Contact</a></li>
+    </ul>
+  </div>
+<h1 class="center">The Yorkshire Coder&trade;</h1>
+</nav>
+
+</div>
+
+</header>
+<%# RESOLVE POSITIONING OF NOTICE %>
+  <div class="alerts">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  </div>
+  <div class="topbanner">
+  <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Rectangle+3.png">
+  </div>
