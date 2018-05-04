@@ -1,5 +1,15 @@
 <p>Welcome <%= @email %>!</p>
 
+<p>This is an automated email to confirm your registration on Farm to Table: Australia's fresh produce solution.</p>
+
+<p>Confirming your email is easy, and can be done by clicking the link below.  You need to do this wthin 48 hours or your account will be deactivated</p>
+
 <p>You can confirm your account email through the link below:</p>
 
 <p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>
+
+<p>Have a pleasant day!</p>
+
+<p>With love from the Farm to Table team</p>
+
+<small>If you are requiring help with setting up your account, feel free to reply to this email</small>
