@@ -55,11 +55,19 @@
 </div>
 
 </header>
-<%# RESOLVE POSITIONING OF NOTICE %>
-  <div class="alerts">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  </div>
+
+
+
   <div class="topbanner">
   <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Rectangle+3.png">
+<h2><%= yield :title %></h2>
   </div>
+
+
+
+
+<%# RESOLVE POSITIONING OF NOTICE %>
+    <div class="alerts">
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+    </div>

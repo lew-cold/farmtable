@@ -13,6 +13,9 @@ class ProductsController < ApplicationController
       end
   end
 
+  def title
+    @title = "Products"
+  end
   
 
   # GET /products/1
