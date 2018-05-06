@@ -49,6 +49,7 @@ GEM
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (10.0.2)
+    cancan (1.6.10)
     carrierwave (1.2.2)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -221,6 +222,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bootsnap (>= 1.1.0)
   byebug
+  cancan
   carrierwave
   devise
   dotenv-rails

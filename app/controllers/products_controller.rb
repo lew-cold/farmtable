@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+  # before_action :load_and_authorize_resource
+  # before_action :skip_authorize_resource, :only => [:new, :show]
   before_action :authenticate_user!, :except => [:show, :index]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
@@ -30,6 +32,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    authorize! :edit, @product
   end
 
   # POST /products
@@ -51,6 +54,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    authorize! :update, @product
     respond_to do |format|
       if @product.update(product_params)
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
@@ -65,6 +69,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1
   # DELETE /products/1.json
   def destroy
+    authorize! :destroy, @product
     @product.destroy
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }

@@ -31,3 +31,6 @@
 
 en:
   hello: "Hello world"
+
+  unauthorized:
+    default: "Uh-oh!  You are trying to access a page you don't have permission for.  If you received this message in error - please raise a support ticket."

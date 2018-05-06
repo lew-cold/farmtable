@@ -1,4 +1,8 @@
 class RegistrationsController < Devise::RegistrationsController
+    # resources :users, only [:show, :edit, :update, :destroy]
+
+    def index
+    end
 
     def after_sign_up_path_for(resource)
         new_profile_path
