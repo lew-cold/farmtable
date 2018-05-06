@@ -13,10 +13,10 @@
       	  </div>
         </div>
         <nav class="menu" role="navigation">
-          <a href="#toppage">Home</a>
-          <a href="#aboutme">Products</a>
+          <%= link_to "Home", root_path %>
+          <%= link_to "Products", products_path %>
           <a href="#timelinehead">Message</a>
-          <a href="#skills">Profile</a>
+          <%= link_to "Profiles", profiles_path %>
           <a href="#projects">Support</a>        
           <% if user_signed_in? %>
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "devise" %>        

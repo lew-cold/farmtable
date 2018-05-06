@@ -31,9 +31,20 @@
     <%= form.text_field :price %>
   </div>
 
+  <%# <div class="field"> %>
+    <%# <%= form.label :category %>
+    <%# <%= form.text_field :category %>
+  <%# </div> %>
+
   <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
+  <%= form.label :category %>
+  <%# <%= form.text_field :category %>
+  <select name="Category[category]">
+  <option>Select a Category</option>
+  <option>Fruit</option>
+  <option>Vegetables</option>
+  <option></option>
+  </select>
   </div>
 
   <div class="field">
