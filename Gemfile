@@ -35,9 +35,10 @@ gem 'devise'
 gem 'carrierwave'
 gem 'fog-aws'
 gem 'dotenv-rails'
-gem 'mailgun-rails'
 gem 'cancan'
+gem 'omniauth-stripe-connect'
 # gem 'foreman'
+# gem 'mailgun-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
