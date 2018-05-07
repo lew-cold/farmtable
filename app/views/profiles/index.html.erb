@@ -1,12 +1,12 @@
 <%= content_for :title do %> Profile <% end %>
-
+<div class="center">
 <div class="search">
             <%= form_tag(profiles_path, :method => "get", id: "search-form") do %>
             <%= text_field_tag :search, params[:search], placeholder: "Search Profiles" %>
             <%= submit_tag "Search", :name => nil %>
             <% end %>
 </div>
-
+<br><br><br>
 <table>
   <thead>
     <tr>
@@ -38,4 +38,5 @@
     <% end %>
   </tbody>
 </table>
+</div>
 

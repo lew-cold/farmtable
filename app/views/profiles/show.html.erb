@@ -1,10 +1,5 @@
 <%= content_for :title do %> View Profile <% end %>
-
-<p>
-  <strong>Id:</strong>
-  <%= @profile.id %>
-</p>
-
+<div class="center">
 <p>
   <strong>Username:</strong>
   <%= @profile.username %>
@@ -39,3 +34,4 @@
   <%= link_to 'Edit', edit_profile_path(@profile) %> |
 <% end %>
 <%= link_to 'Back', profiles_path %>
+</div>

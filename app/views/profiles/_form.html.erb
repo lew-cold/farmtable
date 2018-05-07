@@ -1,4 +1,4 @@
-
+<div class ="center">
 <%= form_with(model: profile, local: true) do |form| %>
   <% if profile.errors.any? %>
     <div id="error_explanation">
@@ -46,3 +46,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+<%= link_to 'Back', profiles_path %>
+</div>
