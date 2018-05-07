@@ -14,7 +14,7 @@
   <strong>First name:</strong>
   <%= @profile.first_name %>
 </p>
-
+<% if @profile.user == current_user %>
 <p>
   <strong>Last name:</strong>
   <%= @profile.last_name %>
@@ -29,11 +29,13 @@
   <strong>Suburb:</strong>
   <%= @profile.suburb %>
 </p>
-
+<% end %>
 <p>
   <strong>Postcode:</strong>
   <%= @profile.postcode %>
 </p>
 
-<%= link_to 'Edit', edit_profile_path(@profile) %> |
+<% if @profile.user == current_user %>
+  <%= link_to 'Edit', edit_profile_path(@profile) %> |
+<% end %>
 <%= link_to 'Back', profiles_path %>
