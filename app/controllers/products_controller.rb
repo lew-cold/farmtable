@@ -18,6 +18,10 @@ class ProductsController < ApplicationController
     @title = "Products"
   end
   
+  def buy
+    
+  end
+
 
   # GET /products/1
   # GET /products/1.json
