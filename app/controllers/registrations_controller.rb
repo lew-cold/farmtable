@@ -4,11 +4,11 @@ class RegistrationsController < Devise::RegistrationsController
     end
 
     def after_sign_up_path_for(resource)
-        user_stripe_connect_omniauth_authorize_path
+        interstitial_path
     end
 
     def after_inactive_sign_up_path_for(resource)
-        user_stripe_connect_omniauth_authorize_path
+        interstitial_path
     end
 
     def create

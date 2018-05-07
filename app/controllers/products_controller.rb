@@ -9,7 +9,7 @@ class ProductsController < ApplicationController
   def assign_env_variable
     gon.stripe_key = ENV['PUBLISHABLE_KEY']
   end
-  
+
   def index
     @products = Product.all
       if params[:search]
@@ -90,6 +90,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:user_id, :product_name, :description, :quantity, :price, :category, :product_img)
+      params.require(:product).permit(:user_id, :product_name, :description, :quantity, :price, :category, :product_img, :shipping)
     end
 end

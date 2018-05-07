@@ -1,0 +1,9 @@
+<%= content_for :title do %> Get Selling <% end %>
+<p>In order to sell on Farm-To-Table - you MUST connect to stripe.  This is a free service and connecting now will help in future.</p>
+
+<p>Please choose how you wish to proceed:<p>
+<ul>
+<li><%= link_to "Connect to Stripe", user_stripe_connect_omniauth_authorize_path %></li>
+<P>OR</P>
+<li><%= link_to "Not now, lets finish creating my account", new_profile_path %></li>
+</ul>

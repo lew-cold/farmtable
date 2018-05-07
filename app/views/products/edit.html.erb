@@ -1,4 +1,4 @@
 <%= content_for :title do %> Editing Product <% end %>
 
 <%= render 'form', product: @product %>
-
+<%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
