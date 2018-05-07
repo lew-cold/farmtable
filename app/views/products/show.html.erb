@@ -1,5 +1,6 @@
-<p id="notice"><%= notice %></p>
 
+
+<%= content_for :title do %> <%= @product.product_name %> <% end %>
 <p>
   <strong>Product name:</strong>
   <%= @product.product_name %>
@@ -25,7 +26,7 @@
   <%= @product.category %>
 </p>
 
-<p>
+<p class="prod_image">
 <strong>Product Image:</strong>
   <% if @product.product_img? %>
       <%= image_tag @product.product_img.url %>
