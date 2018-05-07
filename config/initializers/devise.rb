@@ -261,7 +261,8 @@ Devise.setup do |config|
   ENV['CLIENT_ID'],
   ENV['SECRET_KEY'],
   scope: 'read_write',
-  stripe_landing: 'login'
+  stripe_landing: 'register'
+ 
   # ==> Warden configuration
   # If you want to use other strategies, that are not supported by Devise, or
   # change the failure app, you can configure them inside the config.warden block.

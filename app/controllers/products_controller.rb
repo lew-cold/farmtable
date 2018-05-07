@@ -5,6 +5,11 @@ class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   # GET /products
   # GET /products.json
+
+  def assign_env_variable
+    gon.stripe_key = ENV['PUBLISHABLE_KEY']
+  end
+  
   def index
     @products = Product.all
       if params[:search]

@@ -44,7 +44,7 @@ class ProfilesController < ApplicationController
     @profile.user = current_user
     respond_to do |format|
       if @profile.save
-        format.html { redirect_to root_path, notice: 'Profile was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Your account has been successfully created!  You must now confirm your email address within 48 hours!' }
         format.json { render :show, status: :created, location: @profile }
       else
         format.html { render :new }
