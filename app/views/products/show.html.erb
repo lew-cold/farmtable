@@ -31,15 +31,23 @@
     <% end %>
 </p>
 
-<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-data-description="<%= @product.product_name %>"
-data-amount="<%= (@product.price + @product.shipping) %>
 <% if user_signed_in? %>
-data-email="<%= current_user.email %>"
+<%= form_tag charges_path do %>
+ <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+   class: 'stripe-button',
+   data: {
+     key: ENV["PUBLISHABLE_KEY"],
+     # total price x 100 because it must be in cents
+     amount: (@product.price + @product.shipping) * 100,
+     name: current_user.email,
+     description: @product.product_name,
+     image: "https://stripe.com/img/documentation/checkout/marketplace.png",
+     locale: "auto",
+     currency: "aud"
+   }
+ %>
 <% end %>
-data-locale="auto">
-</script>
+<% end %>
 
 <% if @product.user == current_user %>
   <%= link_to 'Edit', edit_product_path(@product) %>

@@ -39,21 +39,7 @@
 
   <div class="field">
   <%= form.label :category %>
-  <select name="Category[category]">
-  <option>Select a Category</option>
-  <option>Fruit</option>
-  <option>Vegetables</option>
-  <option>Dairy</option>
-  <option>Speciality - All</option>
-  <option disabled>-----</option>
-  <option>Baked Goods</option>
-  <option>Home Cooking</option>
-  <option>Ready to Eat - All </option>
-  <option disabled>-----</option>
-  <option>Plants/Seeds</option>
-  <option>Livestock - All</option>
-  <option>Farm Supplies - All</option>
-  </select>
+  <%= form.select :category, ['Fruit', 'Vegetables', 'Dairy', 'Speciality - All', 'Baked Goods', 'Home Cooking', 'Ready to Eat - All', 'Plants/Seeds', 'Livestock - Feed', 'Livestock - Other', 'Farm Supplies - All', 'Other - All']%>
   </div>
 
   <div class="field">

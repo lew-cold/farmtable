@@ -32,6 +32,7 @@
 
 <% if @profile.user == current_user %>
   <%= link_to 'Edit', edit_profile_path(@profile) %> |
+  <%= link_to "Connect to Stripe", user_stripe_connect_omniauth_authorize_path %>
 <% end %>
 <%= link_to 'Back', profiles_path %>
 </div>

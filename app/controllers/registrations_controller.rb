@@ -11,10 +11,4 @@ class RegistrationsController < Devise::RegistrationsController
         interstitial_path
     end
 
-    def create
-        super
-        if resource.save
-            resource.create_profile
-        end
-      end
 end
