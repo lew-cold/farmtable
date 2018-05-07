@@ -31,6 +31,8 @@
     <% end %>
 </p>
 
+<% @amount = (@product.price + @product.shipping) * 100 %>
+
 <% if user_signed_in? %>
 <%= form_tag charges_path do %>
  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
@@ -38,8 +40,8 @@
    data: {
      key: ENV["PUBLISHABLE_KEY"],
      # total price x 100 because it must be in cents
-     amount: (@product.price + @product.shipping) * 100,
-     name: current_user.email,
+     amount: @amount,
+     name: "Farm-to-Table",
      description: @product.product_name,
      image: "https://stripe.com/img/documentation/checkout/marketplace.png",
      locale: "auto",
