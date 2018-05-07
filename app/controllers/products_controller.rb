@@ -3,7 +3,6 @@ class ProductsController < ApplicationController
   # before_action :skip_authorize_resource, :only => [:new, :show]
   before_action :authenticate_user!, :except => [:show, :index]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
   # GET /products
   # GET /products.json
   def index
@@ -23,6 +22,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    # @product.user = current_user
   end
 
   # GET /products/new

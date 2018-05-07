@@ -1,3 +1,4 @@
+<div class="center">
 <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
@@ -27,28 +28,31 @@
   </div>
 
   <div class="field">
-    <%= form.label :price %>
+    <%= form.label "Price $" %>
     <%= form.text_field :price %>
   </div>
 
-  <%# <div class="field"> %>
-    <%# <%= form.label :category %>
-    <%# <%= form.text_field :category %>
-  <%# </div> %>
-
   <div class="field">
   <%= form.label :category %>
-  <%# <%= form.text_field :category %>
   <select name="Category[category]">
   <option>Select a Category</option>
   <option>Fruit</option>
   <option>Vegetables</option>
-  <option></option>
+  <option>Dairy</option>
+  <option>Speciality - All</option>
+  <option disabled>-----</option>
+  <option>Baked Goods</option>
+  <option>Home Cooking</option>
+  <option>Ready to Eat - All </option>
+  <option disabled>-----</option>
+  <option>Plants/Seeds</option>
+  <option>Livestock - All</option>
+  <option>Farm Supplies - All</option>
   </select>
   </div>
 
   <div class="field">
-    <%= form.label :product_img %>
+    <%= form.label "Product Image" %>
     <%= form.file_field :product_img %>
   </div>
 
@@ -56,3 +60,5 @@
     <%= form.submit %>
   </div>
 <% end %>
+<%= link_to 'Back', products_path %>
+</div>

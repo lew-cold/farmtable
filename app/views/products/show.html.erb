@@ -32,5 +32,8 @@
     <% end %>
 </p>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
+<% if @product.user == current_user %>
+  <%= link_to 'Edit', edit_product_path(@product) %>
+<% end %>
+
 <%= link_to 'Back', products_path %>
