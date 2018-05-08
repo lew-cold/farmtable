@@ -11,7 +11,8 @@
           <% end %></p>
       <p>Product name: <%= product.product_name %></p>
       <p>Price $/(KG/Unit): <%= product.price %></p>
-      <%= link_to 'View More', product %>
+      <%= link_to 'View More', product %> |
+      <%= link_to 'Buy', new_product_order_path(product), data: { no_turbolink: true } %>
     </div>
     <% end %>
 </div>

@@ -47,7 +47,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    if @user.uid.exists?
+    @user = current_user
+    if @user.uid != nil
       @product = Product.new(product_params)
       @product.user = current_user
       respond_to do |format|
@@ -61,6 +62,7 @@ class ProductsController < ApplicationController
       end
     else
       redirect_to profiles_url, notice: 'You have not connected a stripe account.  Connect now and start selling today!'
+    end
   end
 
   # PATCH/PUT /products/1
@@ -93,7 +95,7 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.find(params[:id])
-      @user = User.find(params[current_user])
+      
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

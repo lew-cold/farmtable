@@ -13,17 +13,18 @@ class ChargesController < ApplicationController
         @quantity = params[:quantity]
         @quantity = @quantity.to_i
         # application_fee = (@amount * 0.05).to_i     # 5%
-        # byebug
+        byebug
         charge = Stripe::Charge.create({
         amount: @amount * @quantity,
-        # address_line1: @profile.street_address,
-
         description: @product.product_name,
         currency: 'aud',
         source: token,
         receipt_email: @email,
         destination: @owner.uid
         })
+
+        OrdersMailer.with(buyer: @buyer, product: @product, seller: @owner).buyer_email.deliver_now
+        OrdersMailer.with(seller: @owner, product: @product, buyer: @buyer).seller_email.deliver_now
         redirect_to '/success'
 
         rescue Stripe::CardError => e
@@ -39,8 +40,8 @@ class ChargesController < ApplicationController
         @product = Product.find(params[:product_id])
         @seller = @product.user_id
         @owner = User.find(@seller)
-        @buyer = User.find(current_user.id)
-        @profile = Profile.find([current_user.id])
+        @buyer = current_user
+        @profile = Profile.find(@buyer.id)
         @email = (params[:stripeEmail])
     end
    

@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  get 'orders/new'
   resources :profiles
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'omniauth_callbacks' }
-  resources :products
+  resources :products do
+    resources :orders
+  end
   resources :charges
   
   root 'pages#index'

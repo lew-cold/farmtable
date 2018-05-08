@@ -40,11 +40,10 @@
 <%= label_tag(:quantity, 'Quantity:') %>
     <%= number_field_tag(:quantity) %>
  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
- 
    class: 'stripe-button',
    data: {
      key: ENV["PUBLISHABLE_KEY"],
-     amount: @amount,
+     amount: @amount "* quantity supplied"
      name: "Farm-to-Table",
      description: @product.product_name,
      image: "https://stripe.com/img/documentation/checkout/marketplace.png",
@@ -53,6 +52,8 @@
    }
  %>
 <% end %>
+
+
 <% end %>
 
 <% if @product.user == current_user %>
