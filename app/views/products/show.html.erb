@@ -31,15 +31,19 @@
     <% end %>
 </p>
 
-<% @amount = (@product.price + @product.shipping) * 100 %>
+<% @amount = ((@product.price + @product.shipping) * 100) %>
 
 <% if user_signed_in? %>
+
 <%= form_tag charges_path do %>
+<%= hidden_field_tag "product_id", "#{@product.id}" %>
+<%= label_tag(:quantity, 'Quantity:') %>
+    <%= number_field_tag(:quantity) %>
  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
+ 
    class: 'stripe-button',
    data: {
      key: ENV["PUBLISHABLE_KEY"],
-     # total price x 100 because it must be in cents
      amount: @amount,
      name: "Farm-to-Table",
      description: @product.product_name,
