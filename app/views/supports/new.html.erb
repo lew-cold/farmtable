@@ -1,0 +1,20 @@
+<p>this is a test</p>
+
+<%= form_with model: @support do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :email %>
+  <%= form.text_field :email %>
+  <br>
+  <%= form.label :phone_number %>
+  <%= form.text_field :phone_number %>
+  <br>
+  <%= form.label :subject %>
+  <%= form.text_field :subject %>
+  <br>
+  <%= form.label :body %>
+  <%= form.text_area :body %>
+  <br>
+  <%= form.submit %>
+<% end %>

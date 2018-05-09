@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get 'orders/new'
   resources :profiles
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'omniauth_callbacks' }
   resources :products
@@ -24,6 +23,7 @@ Rails.application.routes.draw do
   root 'pages#index'
   get '/success' => 'pages#success'
   get '/interstitial' => 'pages#interstitial'
+  resources :supports
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
