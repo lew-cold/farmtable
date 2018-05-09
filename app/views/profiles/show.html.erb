@@ -17,17 +17,20 @@
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= current_user.email %>
-</p>
-<p>
   <strong>First name:</strong>
   <%= @profile.first_name %>
 </p>
+
 <% if @profile.user == current_user %>
+
 <p>
   <strong>Last name:</strong>
   <%= @profile.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= current_user.email %>
 </p>
 
 <p>
