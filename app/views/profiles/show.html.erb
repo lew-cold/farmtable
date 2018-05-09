@@ -2,9 +2,10 @@
 <div class="center">
 
 <% if @profile.user == current_user %>
-  <%= link_to 'Edit', edit_profile_path(@profile) %> |
-  <%= link_to "Connect to Stripe", user_stripe_connect_omniauth_authorize_path %> |
   <%= link_to 'New Product', new_product_path %> |
+  <%= link_to "Connect to Stripe", user_stripe_connect_omniauth_authorize_path %> |
+  <%= link_to 'Edit Profile Information', edit_profile_path(@profile) %> |
+  <%= link_to 'Change Password', edit_user_registration_path %> |
   <%= link_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete %>
 <% end %>
 
