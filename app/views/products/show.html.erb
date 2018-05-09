@@ -1,4 +1,10 @@
 <%= content_for :title do %> <%= @product.product_name %> <% end %>
+<div class="center edit">
+<% if @product.user == current_user %>
+  <%= link_to 'Edit Product', edit_product_path(@product) %>
+<% end %>
+</div>
+<br>
 
 <div class="prod_image">
   <% if @product.product_img? %>
@@ -68,9 +74,7 @@
 
 <% end %>
 
-<% if @product.user == current_user %>
-  <%= link_to 'Edit', edit_product_path(@product) %>
-<% end %>
+
 
 
 <%= link_to 'Back', products_path %>
