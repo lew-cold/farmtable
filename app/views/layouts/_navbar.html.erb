@@ -41,15 +41,19 @@
     <span></span>
     
     <ul id="menu">
-        <li><a href="#toppage">Home</a></li>
-        <li><a href="#aboutme">About</a></li>
-        <li><a href="#timelinehead">Timeline</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contactme">Contact</a></li>
+        <li><%= link_to "Home", root_path %>
+        <li><%= link_to "Products", products_path %>
+        <li><%= link_to "Messages",   conversations_path %>
+        <li><%= link_to "Profiles", profiles_path %>
+        <li><%= link_to "Support", new_support_path %>        
+        <li><% if user_signed_in? %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "devise" %>        
+              <% else %>
+                <%= link_to "Login", new_user_session_path, class: "devise" %>  
+            <% end %></li>
     </ul>
   </div>
-<h1 class="center">The Yorkshire Coder&trade;</h1>
+<h1 class="center">FarmToTable&trade;</h1>
 </nav>
 
 </div>
