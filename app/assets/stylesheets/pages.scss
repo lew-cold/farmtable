@@ -1,3 +1,24 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// .object_holder {
+// }
+.titles {
+    font-family: 'bevan', cursive;
+    background-color: #E6FAFC;
+}
+
+.float_text {
+    font-weight: bolder;
+    background-color: #E6FAFC;
+}
+
+.left {
+    margin-right: 50%;
+    text-align: left;
+}
+
+.right {
+    margin-left: 50%;
+    text-align: right;
+}

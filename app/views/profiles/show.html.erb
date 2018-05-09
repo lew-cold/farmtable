@@ -1,5 +1,15 @@
 <%= content_for :title do %> View Profile <% end %>
 <div class="center">
+
+<% if @profile.user == current_user %>
+  <%= link_to 'Edit', edit_profile_path(@profile) %> |
+  <%= link_to "Connect to Stripe", user_stripe_connect_omniauth_authorize_path %> |
+  <%= link_to 'New Product', new_product_path %> |
+  <%= link_to "Cancel my account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete %>
+<% end %>
+
+<h3 class="profile_title">User Information</h3>
+
 <p>
   <strong>Username:</strong>
   <%= @profile.username %>
@@ -30,9 +40,22 @@
   <%= @profile.postcode %>
 </p>
 
-<% if @profile.user == current_user %>
-  <%= link_to 'Edit', edit_profile_path(@profile) %> |
-  <%= link_to "Connect to Stripe", user_stripe_connect_omniauth_authorize_path %>
-<% end %>
+<h3 class="profile_title">Users Product(s)</h3>
+
+<div class="product_grid">
+
+  
+    <% @profile.user.products.each do |product| %>
+    <div class="product_holder">
+      <p> <% if product.product_img? %>
+            <%= image_tag product.product_img.url %>
+          <% end %></p>
+      <p>Product name: <%= product.product_name %></p>
+      <p>Price $/(KG/Unit): <%= product.price %></p>
+      <%= link_to 'View More', product %>
+    </div>
+    <% end %>
+</div>
+
 <%= link_to 'Back', profiles_path %>
 </div>

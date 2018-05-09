@@ -1,13 +1,9 @@
-<%= content_for :title do %> Home <% end %>
+<%= content_for :title do %> Home: Welcome! <% end %>
 
-<h1>Welcome to Farm-Table!</h1>
-
-<p>
-<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, method: :delete) %>        
-<% else %>
-  <%= link_to('Login', new_user_session_path)  %>  
-<% end %>
-<br>
-Click <%= link_to "here", new_user_registration_path %> to signup!
-</p>
+<h1 class="titles left">Whats this all about?</h1>
+<p class="float_text left">Farm to Table is about connecting primary producers with end consumers.  Cut the middle man and get fresh produce direct from the source.</p>
+<h1 class="titles right">So, is this just for big producers?</h1>
+<p class="float_text right">Very much not so.  If you have a product you want to sell: you can!  The ease  ordering and selling products is what makes this so unique.  No longer are you buying near to rotten produce or dealing with scandalous price fixes!</p>
+<h1 class="titles left">Sweet! Where to from here?</h1>
+<p class="float_text left">If you’re a buyer, feel free to browse the cataogue by clicking “Products” at the top. You’ll need to signup if you wish to buy anything.  If you’re here to sell - signup for an account and list a product from your dashboard.</p>
+<h1 class="titles right">It’s as easy as 1, 2, 3</h1>

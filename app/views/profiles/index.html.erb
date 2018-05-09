@@ -7,51 +7,21 @@
               <%= submit_tag "Search", :name => nil %>
               <% end %>
   </div>
-  <br><br><br>
-  
+  <div id="top_text">
+    <p>To list a new product, view your profile and select 'New Product' - be sure to connect to stripe first!</p>
+    <p>By default, we show just your profile first.  To view others, please enter search paramater in the search box</p>
+    <p>For security, we will only show you a users username, first name and postcode on any profile that is not yours</p>
+  </div>
   <div class="profile_grid">
-
-  
     <% @profiles.each do |profile| %>
     <div class="profile_holder">
-      <p>Product name: <%= product.product_name %></p>
-      <p>Price $/(KG/Unit): <%= product.price %></p>
-      <%= link_to 'View More', product %>
+      <p>Username: <%= profile.username %></p>
+      <p>First Name: <%= profile.first_name %></p>
+      <p>Post Code: <%= profile.postcode %></p>
+      <%= link_to 'View More', profile %>
     </div>
     <% end %>
   </div>
 
-
-  <table>
-    <thead>
-      <tr>
-        <th>Id</th>
-        <th>Username</th>
-        <th>First name</th>
-        <%# <th>Last name</th> %>
-        <%# <th>Street address</th> %>
-        <%# <th>Suburb</th> %>
-        <th>Postcode</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @profiles.each do |profile| %>
-        <tr>
-          <td><%= profile.id %></td>
-          <td><%= profile.username %></td>
-          <td><%= profile.first_name %></td>
-          <%# <td><%= profile.last_name</td> %>
-          <%# <td><%= profile.street_address %>
-          <%# <td><%= profile.suburb %>
-          <td><%= profile.postcode %></td>
-          <td><%= link_to 'Show', profile %></td>
-          <%# <td><%= link_to 'Edit', edit_profile_path(profile) %>
-          <%# <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
 </div>
 

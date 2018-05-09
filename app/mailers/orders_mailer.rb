@@ -20,5 +20,10 @@ class OrdersMailer < ApplicationMailer
         mail(to: @buyer.email, subject: 'Receipt for your purchase!')
     end
 
+    def product_email
+        @user = params[:user]
+        @product = params[:product]
+        mail(to: @user.email, subject: 'Your product was listed successfully')
+    end
 
 end

@@ -26,6 +26,11 @@
 </p>
 
 <p class="products">
+  <strong>Unit:</strong>
+  <%= @product.units %>
+</p>
+
+<p class="products">
 <strong>Shipping:</strong>
 <%= @product.shipping %>
 </p>
@@ -37,7 +42,9 @@
 
 <% @amount = ((@product.price + @product.shipping) * 100) %>
 
+<% if @product.user != current_user %>
 <% if user_signed_in? %>
+
 <div class="products">
 <%= form_tag charges_path do %>
 <%= hidden_field_tag "product_id", "#{@product.id}" %>
@@ -55,6 +62,7 @@
      currency: "aud"
    }
  %>
+<% end %>
 <% end %>
 </div>
 

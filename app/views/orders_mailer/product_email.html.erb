@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Farm_to_Table.png" alt="Farm To Table Logo" title="Logo">
+<br>
+    <h1>Your product is listed, <%= @user.profile.first_name %></h1>
+    <p>
+      There is nothing else you need to do!  Please make sure that the item details are correct below.  If there are any problems, log in and edit your product by navigating tot he product and clicking 'Edit'.
+    </p>
+    <p>
+    <ul>
+
+      <li>Product Name: <%= @product.product_name %></li>
+      <li>Product Description: <%= @product.description %></li>
+      <li>Product Unit: <%= @product.units %></li>
+      <li>Product Price: <%= @product.price %></li>
+      <li>Product Shipping: <%= @product.shipping %></li>
+      <li>Product Quantity: <%= @product.quantity %></li>
+        <% if @product.product_img? %>
+        <li>Product Image:
+      <%= image_tag @product.product_img.url %>
+      </li>
+    <% end %>
+      
+      <br><br>
+  
+      <br><br>
+      <li>Stripe User ID: <%= @user.uid %> </li>
+    </ul>
+
+    </p>
+    <p>Thanks for selling with us, have a great day!</p>
+  </body>
+</html>

@@ -53,6 +53,7 @@ class ProductsController < ApplicationController
       @product.user = current_user
       respond_to do |format|
         if @product.save
+          OrdersMailer.with(user: @user, product: @product).product_email.deliver_now
           format.html { redirect_to @product, notice: 'Product was successfully created.' }
           format.json { render :show, status: :created, location: @product }
         else
@@ -100,6 +101,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:user_id, :product_name, :description, :quantity, :price, :category, :product_img, :shipping, :stripe_id)
+      params.require(:product).permit(:user_id, :product_name, :description, :units, :quantity, :price, :category, :product_img, :shipping)
     end
 end
