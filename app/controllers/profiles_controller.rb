@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   
   # before_action :require_permission, only: :edit
-  before_action :authenticate_user!, :except => [:show, :index]
+  before_action :authenticate_user!
   before_action :set_profile, only: [:show, :edit, :update, :destroy]
   
 
