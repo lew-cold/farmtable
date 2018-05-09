@@ -1,11 +1,16 @@
-<p>this is a test</p>
+<%= content_for :title do %> Support Ticket <% end %>
+<div class="center">
+<p>You can request help from the site admin by filling in the form below.  Be as desciptive as possible!  If the issue relates to a transaction, please include your stripe token - contained in your receipt.</p>
 
 <%= form_with model: @support do |form| %>
   <%= form.label :name %>
-  <%= form.text_field :name %>
+  <%= form.text_field :name, value: @user.profile.first_name + " " + @user.profile.last_name, readonly: true %>
   <br>
   <%= form.label :email %>
-  <%= form.text_field :email %>
+  <%= form.text_field :email, value: @user.email, readonly: true %>
+  <br>
+  <%= form.label :username %>
+  <%= form.text_field :username, value: @user.profile.username, readonly: true %>
   <br>
   <%= form.label :phone_number %>
   <%= form.text_field :phone_number %>
@@ -18,3 +23,4 @@
   <br>
   <%= form.submit %>
 <% end %>
+</div>

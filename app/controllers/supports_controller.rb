@@ -1,14 +1,15 @@
 class SupportsController < ApplicationController
 
-
+    before_action :set_params
 
     def new
         @support = Support.new
     end
     def create
+        byebug
         @support = Support.new support_params
             if @support.valid?
-                SupportMailer.with(@support).support_email.deliver_now
+                SupportMailer.with(support: @support).support_email.deliver_now
                 redirect_to root_path
                 flash[:notice] = "We have received your message and will be in touch soon!"
             else
@@ -20,7 +21,11 @@ class SupportsController < ApplicationController
 
     private
     def support_params
-        params.require(:support).permit(:name, :email, :phone_number, :subject, :body)
+        params.require(:support).permit(:name, :email, :phone_number, :subject, :body, :username)
+    end
+
+    def set_params
+        @user = current_user
     end
 end
 

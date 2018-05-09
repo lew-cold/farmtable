@@ -1,1 +1,28 @@
-TEST EMAIL
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+<img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Farm_to_Table.png" alt="Farm To Table Logo" title="Logo">
+<br>
+<h1>You have a new support ticket</h1>
+<br><br>
+<table>
+ <tr>
+    <th>Name</th>
+    <th>Username</th> 
+    <th>Email</th>
+    <th>Subject</th> 
+  </tr>
+  <tr>
+    <td><%= @support.name %></td>
+    <td><%= @support.username %></td>
+    <td><%= @support.email %></td> 
+    <td><%= @support.subject %></td>
+</tr>
+</table>
+<br><br>
+<strong>Main Message: </strong>
+<p><%= @support.body %></p>
+
