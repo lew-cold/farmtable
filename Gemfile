@@ -44,6 +44,7 @@ gem 'mailboxer'
 gem 'gravatar_image_tag'
 gem 'chosen-rails'
 gem 'turbolinks'
+gem "recaptcha", require: "recaptcha/rails"
 # gem 'foreman'
 # gem 'mailgun-rails'
 

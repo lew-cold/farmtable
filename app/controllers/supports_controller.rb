@@ -1,13 +1,21 @@
 class SupportsController < ApplicationController
-
+    # include Recaptcha::ClientHelper
+    # include Recaptcha::Verify
     before_action :set_params
 
     def new
         @support = Support.new
     end
+
+
+    if verify_recaptcha(model: @support)
+       
+      else
+        render 'new'
+      end
     def create
-        byebug
         @support = Support.new support_params
+        if verify_recaptcha(model: @support)
             if @support.valid?
                 SupportMailer.with(support: @support).support_email.deliver_now
                 redirect_to root_path
@@ -16,6 +24,10 @@ class SupportsController < ApplicationController
                 flash[:notice] = "There was an error sending your message. Please try again."
                 render :new
             end
+        else
+            flash[:notice] = "You need to verify you're a human!"
+            render :new
+        end
     end
 
 
