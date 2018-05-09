@@ -17,7 +17,7 @@
           <%= link_to "Products", products_path %>
           <%= link_to "Messages",   conversations_path %>
           <%= link_to "Profiles", profiles_path %>
-          <a href="#projects">Support</a>        
+          <%= link_to "Support", new_support_path %>        
           <% if user_signed_in? %>
             <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "devise" %>        
           <% else %>

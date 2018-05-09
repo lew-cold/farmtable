@@ -1,3 +1,28 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+// .form-control {
+//     display: inline-block;
+//     text-align: center;
+//     width: 30%;
+// }
+div.form {
+    display: block;
+    text-align: center;
+    // width: 30%;
+}
+
+form {
+    display: inline-block;
+    // margin-left: auto;
+    // margin-right: auto;
+    text-align: left;
+}
+
+.form-control {
+    width: 100%;
+}
+
+// .form-control {
+//     width: 30%;
+// }
