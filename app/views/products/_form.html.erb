@@ -2,48 +2,80 @@
 <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
+      <p><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</p>
       <ul>
       <% product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
+    <div></div>
+    <hr/>
+    <div></div>
   <% end %>
 
+
   <div class="field">
-    <%= form.label :product_name %>
+    <strong><%= form.label :product_name %></strong>
+    <br>
+    <small>Keep it small and sweet. Leave the finer stuff for the description field</small>
+    <br>
     <%= form.text_field :product_name %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
+   <strong><%= form.label :description %></strong>
+    <br>
+    <small>Its a good idea to specify here what the product actually is and what you get p/unit.</small>
+    <br>
     <%= form.text_area :description %>
   </div>
 
   <div class="field">
-    <%= form.label :quantity %>
+    <strong><%= form.label :quantity %></strong>
+    <br>
+    <small>How much have you got to sell of each unit?</small>
+    <br>
     <%= form.text_field :quantity %>
   </div>
 
   <div class="field">
-    <%= form.label "Price $" %>
+    <strong><%= form.label "Price $" %></strong>
+    <br>
+    <small>This will be p/whole unit</small>
+    <br>
     <%= form.text_field :price %>
   </div>
-
+  
   <div class="field">
-    <%= form.label "Shipping $" %>
+    <strong><%= form.label "Shipping $" %></strong>
+    <br>
+    <small>This will be a flat rate</small>
+    <br>
     <%= form.text_field :shipping %>
   </div>
-
+  
   <div class="field">
-  <%= form.label :category %>
-  <%= form.select :category, ['Fruit', 'Vegetables', 'Dairy', 'Speciality - All', 'Baked Goods', 'Home Cooking', 'Ready to Eat - All', 'Plants/Seeds', 'Livestock - Feed', 'Livestock - Other', 'Farm Supplies - All', 'Other - All']%>
+    <strong><%= form.label "Unit of Sale" %></strong>
+    <br>
+    <small>Please specify what each quantity buys</small>
+    <br>
+    <%= form.select :units, ['g', 'KG', 'Box', 'Bucket(s)', 'Other(specify in description)'] %>
   </div>
 
   <div class="field">
-    <%= form.label "Product Image" %>
+  <strong><%= form.label :category %></strong>
+  <br>
+  <small>Choose from the available categories what matches your product the best</small>
+  <br>
+  <%= form.select :category, Product::CATEGORIES %>
+  </div>
+
+  <div class="field">
+    <strong><%= form.label "Product Image" %></strong>
+    <br>
+    <small>Max file size is 5MB</small>
+    <br>
     <%= form.file_field :product_img %>
   </div>
 

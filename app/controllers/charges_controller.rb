@@ -8,23 +8,26 @@ class ChargesController < ApplicationController
         
     
         # charge
-        @amount = (@product.price + @product.shipping) * 100
-        token = params[:stripeToken]
         @quantity = params[:quantity]
         @quantity = @quantity.to_i
-        # application_fee = (@amount * 0.05).to_i     # 5%
-        byebug
+        @amount = ((@product.price) * @quantity + @product.shipping) * 100
+        @token = params[:stripeToken]
+        
+        application_fee = (@amount * 0.05).to_i
         charge = Stripe::Charge.create({
-        amount: @amount * @quantity,
+        amount: @amount,
         description: @product.product_name,
         currency: 'aud',
-        source: token,
+        source: @token,
         receipt_email: @email,
-        destination: @owner.uid
+        :destination => {
+            :amount => @amount - application_fee,
+            :account => @owner.uid,
+        }
         })
-
-        OrdersMailer.with(buyer: @buyer, product: @product, seller: @owner).buyer_email.deliver_now
-        OrdersMailer.with(seller: @owner, product: @product, buyer: @buyer).seller_email.deliver_now
+        # @mailer_params = (token: @token, buyer: @buyer, product: @product, seller: @owner, quantity: @quantity, amount: @amount)
+        OrdersMailer.with(token: @token, buyer: @buyer, product: @product, seller: @owner, quantity: @quantity, amount: @amount).buyer_email.deliver_now
+        OrdersMailer.with(token: @token, buyer: @buyer, product: @product, seller: @owner, quantity: @quantity, amount: @amount).seller_email.deliver_now
         redirect_to '/success'
 
         rescue Stripe::CardError => e
@@ -32,6 +35,7 @@ class ChargesController < ApplicationController
         redirect_to new_charge_path
     end
     
+
     def thanks
     end
     
@@ -41,7 +45,7 @@ class ChargesController < ApplicationController
         @seller = @product.user_id
         @owner = User.find(@seller)
         @buyer = current_user
-        @profile = Profile.find(@buyer.id)
+        # @profile = Profile.find(current_user)
         @email = (params[:stripeEmail])
     end
    

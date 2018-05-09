@@ -1,49 +1,53 @@
 <%= content_for :title do %> <%= @product.product_name %> <% end %>
-<p>
+
+<div class="prod_image">
+  <% if @product.product_img? %>
+      <%= image_tag @product.product_img.url %>
+    <% end %>
+</div>
+<p class="products">
   <strong>Product name:</strong>
   <%= @product.product_name %>
 </p>
 
-<p>
+<p class="products">
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
-<p>
-  <strong>Quantity:</strong>
+<p class="products">
+  <strong>Quantity Available:</strong>
   <%= @product.quantity %>
 </p>
 
-<p>
+<p class="products">
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @product.category %>
+<p class="products">
+<strong>Shipping:</strong>
+<%= @product.shipping %>
 </p>
 
-<p class="prod_image">
-<strong>Product Image:</strong>
-  <% if @product.product_img? %>
-      <%= image_tag @product.product_img.url %>
-    <% end %>
+<p class="products">
+  <strong>Category:</strong>
+  <%= @product.category %>
 </p>
 
 <% @amount = ((@product.price + @product.shipping) * 100) %>
 
 <% if user_signed_in? %>
-
+<div class="products">
 <%= form_tag charges_path do %>
 <%= hidden_field_tag "product_id", "#{@product.id}" %>
-<%= label_tag(:quantity, 'Quantity:') %>
+<%= label_tag(:quantity, 'Quantity Required:') %>
     <%= number_field_tag(:quantity) %>
  <%= javascript_include_tag 'https://checkout.stripe.com/checkout.js',
    class: 'stripe-button',
    data: {
      key: ENV["PUBLISHABLE_KEY"],
-     amount: @amount "* quantity supplied"
+     amount: "",
      name: "Farm-to-Table",
      description: @product.product_name,
      image: "https://stripe.com/img/documentation/checkout/marketplace.png",
@@ -52,7 +56,7 @@
    }
  %>
 <% end %>
-
+</div>
 
 <% end %>
 

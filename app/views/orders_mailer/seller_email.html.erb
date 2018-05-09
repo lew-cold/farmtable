@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Farm_to_Table.png" alt="Farm To Table Logo" title="Logo">
+<br>
+    <h1>You have just received an order, <%= @owner.profile.first_name %></h1>
+    <p>
+      You now need to ship the product to the buyer.  Their details are listed below with the product they ordered.
+      If you have any questions, please raise a support ticket on farmtotable!
+    </p>
+    <p>
+    <ul>
+      <li>Product Name: <%= @product.product_name %></li>
+      <li>Quantity Purchased: <%= @quantity %></li>
+      <li>Total Amount Charged: <%= @amount %></li>
+      <br><br>
+      <li>Buyers First Name: <%= @buyer.profile.first_name %>
+      <li>Buyers Last Name: <%= @buyer.profile.last_name %>
+      <li>Buyers Email: <%= @buyer.email %></li>
+      <li>Buyers Address: <%= @buyer.profile.street_address %></li>
+      <li>Suburb: <%= @buyer.profile.suburb %></li>
+      <li>Postcode: <%= @buyer.profile.postcode %></li>
+      <br><br>
+      <li>Stripe Payment Token (REF): <%= @token %> </li>
+    </ul>
+
+    </p>
+    <p>Thanks for selling with us, have a great day!</p>
+  </body>
+</html>
