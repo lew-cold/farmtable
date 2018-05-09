@@ -15,7 +15,7 @@
         <nav class="menu" role="navigation">
           <%= link_to "Home", root_path %>
           <%= link_to "Products", products_path %>
-          <a href="#timelinehead">Message</a>
+          <%= link_to "Messages",   conversations_path %>
           <%= link_to "Profiles", profiles_path %>
           <a href="#projects">Support</a>        
           <% if user_signed_in? %>

@@ -2,10 +2,24 @@ Rails.application.routes.draw do
   get 'orders/new'
   resources :profiles
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'omniauth_callbacks' }
-  resources :products do
-    resources :orders
-  end
+  resources :products
   resources :charges
+  resources :conversations, only: [:index, :show, :destroy] do
+    collection do
+      delete :empty_trash
+    end
+    member do
+      post :reply
+      post :restore
+    end
+  end
+  # resources :conversations, only: [:index, :show, :destroy] do
+  #   member do
+     
+  #     delete :empty_trash
+  #   end
+  # end
+  resources :messages, only: [:new, :create]
   
   root 'pages#index'
   get '/success' => 'pages#success'

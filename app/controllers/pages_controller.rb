@@ -4,7 +4,5 @@ class PagesController < ApplicationController
     end
     def interstitial 
     end
-
-    def wait
-    end
+    
 end

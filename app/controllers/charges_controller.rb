@@ -25,7 +25,6 @@ class ChargesController < ApplicationController
             :account => @owner.uid,
         }
         })
-        # @mailer_params = (token: @token, buyer: @buyer, product: @product, seller: @owner, quantity: @quantity, amount: @amount)
         OrdersMailer.with(token: @token, buyer: @buyer, product: @product, seller: @owner, quantity: @quantity, amount: @amount).buyer_email.deliver_now
         OrdersMailer.with(token: @token, buyer: @buyer, product: @product, seller: @owner, quantity: @quantity, amount: @amount).seller_email.deliver_now
         redirect_to '/success'

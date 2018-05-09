@@ -1,0 +1,29 @@
+<%= content_for :title do %> <%= "Messages" %> <% end %>
+
+<p>Chatting with
+  <%= render 'conversations/participants', conversation: @conversation %>
+</p>
+
+<div class="panel panel-default">
+  <div class="panel-heading"><%= "Subject: "%><%= @conversation.subject %></div>
+
+  <div class="panel-body">
+    <div class="messages">
+      <% @conversation.receipts_for(current_user).each do |receipt| %>
+        <div class="media">
+          <% message = receipt.message %>
+
+          <div class="media-body">
+            <%= message.sender.profile.first_name %><%= ": " %> <%= message.body %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%= form_tag reply_conversation_path(@conversation), method: :post do %>
+  <div class="form-group">
+    <%= text_area_tag 'body', nil, cols: 3, class: 'form-control', placeholder: 'Type something...', required: true %>
+  </div>
+  <%= submit_tag "Send Message", class: 'btn btn-primary' %>
+<% end %>
+  </div>
+</div>
