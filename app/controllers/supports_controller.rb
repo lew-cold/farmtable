@@ -1,6 +1,7 @@
 class SupportsController < ApplicationController
     # include Recaptcha::ClientHelper
     # include Recaptcha::Verify
+    before_action :authenticate_user!
     before_action :set_params
 
     def new
