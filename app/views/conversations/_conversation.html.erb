@@ -1,5 +1,5 @@
-<li class="list-group-item clearfix">
-  <p>Subject: <%= link_to conversation.subject, conversation_path(conversation) %></p>
+<li class="ligri">
+  <p><strong>Subject: <%= link_to conversation.subject, conversation_path(conversation) %></strong></p>
    <p><%= "From: " %> <%= render 'conversations/participants', conversation: conversation %></p>
     <div class="btn-group-vertical pull-right">
     <% if conversation.is_trashed?(current_user) %>
@@ -11,7 +11,7 @@
     
   </div>
     <p>
-      <small>(<span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span>)</small></p>
+      <strong><small>(<span class="text-muted"><%= conversation.last_message.created_at.strftime("%-d %B %Y, %H:%M:%S") %></span>)</strong></small></p>
 </li>
 
 

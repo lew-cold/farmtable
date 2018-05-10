@@ -50,7 +50,11 @@ body {
 
 footer {
     text-align: center;
-    font-size: 0.75rem;
+    font-size: 1rem;
+    bottom: 0;
+    font-weight: bolder;
+    // background-color: #E6FAFC;
+    // font-family: bevan;
 }
 
 @media only screen and (max-width: 700px) {
@@ -91,5 +95,11 @@ footer {
     }
     .sidenav {
         display: none;
+    }
+    .mes_cont {
+        display: inline-block;
+    }
+    .mes_list {
+        // word-wrap: break-word;
     }
 }

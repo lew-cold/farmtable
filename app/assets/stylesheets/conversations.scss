@@ -1,0 +1,28 @@
+.mes_cont {
+    display: flex;
+    flex-direction: row;
+}
+
+.folders {
+    flex-grow: 2;
+    align-content: flex-start;
+}
+
+.mes_list {
+    flex-grow: 5;
+    align-content: flex-end;
+}
+
+.top_text {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.borders {
+    border: 1px solid grey;
+    margin: 0px;
+}
+
+.ligri {
+    border-bottom: 1px solid grey;
+}
