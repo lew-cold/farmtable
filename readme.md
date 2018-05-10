@@ -2,13 +2,13 @@
 
 # Table of Contents
 
-  * [What is the Problem and how will it be resolved?](#What-is-the-Problem-and-how-will-it-be-resolved-)
+  * [What is the Problem and how will it be resolved?](#what-is-the-Problem-and-how-will-it-be-resolved-)
     + [The Problem](#the-problem)
-      - [Why is there a strong demand to buy direct from the farmers/primary producers?](#Why-is-there-a-strong-demand-to-buy-direct-from-the-farmers/primary-producers-)
-      - [Why online all of a sudden?](#Why-online-all-of-a-sudden-)
-      - [Isn't there already existing solutions in place?](#Isn't-there-already-existing-solutions-in-place-)
+      - [Why is there a strong demand to buy direct from the farmers/primary producers?](#why-is-there-a-strong-demand-to-buy-direct-from-the-farmers/primary-producers-)
+      - [Why online all of a sudden?](#why-online-all-of-a-sudden-)
+      - [What existing solutions are already in place?](#what-existing-solutions-are-already-in-place-)
       - [What's wrong with the sites that already exist?](#what-s-wrong-with-the-sites-that-already-exist-)
-      - [Do you think Australia needs this solution?](Do-you-think-Australia-needs-this-solution-)
+      - [Do you think Australia needs this solution?](do-you-think-Australia-needs-this-solution-)
     + [The Solution](#the-solution)
   * [User Stories](#user-stories)
     + [Preliminary User Stories](#preliminary-user-stories)
@@ -51,7 +51,7 @@ Being able to view, sell and organise produce online can bring so many benefits.
 
 Consumers would also benefit from an online store through reductions in their food bills.  The running costs of an online store pale in significance to a traditional retail outlet.  However also as a direct benefit to this consumers also get the convenience associated with being able to place orders wherever they are and not restricted to store opening hours (aside from shipping cut offs etc)
 ***
-### Isn't there already existing solutions in place?
+### What existing solutions are already in place?
 
 Strictly speaking, in the international community, this idea exists to a limited degree.  Within Australia, there are online stores operating that claim to be a direct marketplace but in reality they are nothing more than fronts for 3rd party suppliers.  Retailers such as *Harris Farm* and *Farmhouse Direct* allow to buy directly from producers but the take up has been minimal and the variety on offer is inadequate for commercial purposes.  Harris Farm in particular buy from the producer and resell the product - however they credit where it has been sourced.
 
@@ -185,7 +185,7 @@ My wireframes look quite like the finished product wth a few modifications.  Due
 
 **Mobile View Product View:**
 
-![Mobile View Product](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_profile.jpg "Mobile View Product" )
+![Mobile View Product](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/product_mobile.jpg "Mobile View Product" )
 
 # ERD
 
