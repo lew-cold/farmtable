@@ -5,35 +5,56 @@
   </head>
   <body>
   <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Farm_to_Table.png" alt="Farm To Table Logo" title="Logo">
-<br>
+  <br>
     <h1>Here is your receipt for your recent order on FarmToTable, <%= @buyer.profile.first_name %></h1>
     <p>
       The seller has received details of your order, you need not do anything now.  Make sure your shipping address below is correct.
       <br>
       If there is anything amiss below, please contact the seller directly to resolve any issues.  We will only step in if you're unable to resolve the issue and one of the involved parties raises a support ticket with us.
     </p>
-    <p>
-    <ul>
-      <li>Product Name: <%= @product.product_name %></li>
-      <li>Quantity Purchased: <%= @quantity %></li>
-      <li>Total Amount Charged: <%= @amount %></li>
-      <br><br>
-      <li>Buyers First Name: <%= @buyer.profile.first_name %>
-      <li>Buyers Last Name: <%= @buyer.profile.last_name %>
-      <li>Buyers Email: <%= @buyer.email %></li>
-      <li>Buyers Address: <%= @buyer.profile.street_address %></li>
-      <li>Suburb: <%= @buyer.profile.suburb %></li>
-      <li>Postcode: <%= @buyer.profile.postcode %></li>
-      <br><br>
-      <li>Stripe Payment Token (REF): <%= @token %> </li>
-    </ul>
+    <br><br>
+<table>
+    <tr>
+      <th>Product Name</th>
+      <th>Quantity Purchased</th> 
+      <th>Total Amount Charged</th>
+    </tr>
+    <tr>
+      <td><%= @product.product_name %></td>
+      <td><%= @quantity %></td>
+      <td><%= @amount / 100 %></td> 
+    </tr>
+  </table>
+  <br><br>
+  <table>
+    <tr>
+      <th>Buyers First Name</th>
+      <th>Buyers Last Name</th>
+      <th>Buyers Email</th>
+      <th>Buyers Address</th>
+      <th>Suburb</th>
+      <th>Postcode</th>
+      <th>---</th>
+      <th>Stripe Payment Token</th>
+    </tr>
+    <tr>
+      <td><%= @buyer.profile.first_name %></td>
+      <td><%= @buyer.profile.last_name %></td>
+      <td><%= @buyer.email %></td>
+      <td><%= @buyer.profile.street_address %></td>
+      <td><%= @buyer.profile.suburb %></td>
+      <td><%= @buyer.profile.postcode %></td>
+      <td>---</td>
+      <td><%= @token %></td>
+    </tr>
+  </table>
 
     <ul>
         <li>Seller Name: <%= (@owner.profile.first_name) + (@owner.profile.last_name) %> </li>
         <li>Seller Email: <%= @owner.email %>
     </ul>
 
-    </p>
+    <br>
     <p>Thanks for buying with us, have a great day!</p>
   </body>
 </html>
