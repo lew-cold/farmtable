@@ -63,15 +63,15 @@
         /* Fixed Sidebar (stay in place on scroll) */
         z-index: 1;
         /* Stay on top */
-        top: 10%;
+        top: 8%;
         /* Stay at the top */
         left: 0;
-        background-color: #E6FAFC;
         /* Black */
         overflow-x: hidden;
         /* Disable horizontal scroll */
         padding-top: 20%;
         padding-bottom: 30%;
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 35%, rgba(230, 250, 252, 1) 49%, rgba(230, 250, 252, 1) 100%);
     }
     
     .links {
