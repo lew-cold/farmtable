@@ -7,12 +7,6 @@ class SupportsController < ApplicationController
         @support = Support.new
     end
 
-
-    if verify_recaptcha(model: @support)
-       
-      else
-        render 'new'
-      end
     def create
         @support = Support.new support_params
         if verify_recaptcha(model: @support)
