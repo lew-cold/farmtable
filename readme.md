@@ -22,6 +22,7 @@ View live: www.farmtotable.ml OR farmtable.herokuapp.com
   * [Wireframes](#wireframes)
   * [ERD](#erd)
   * [Trello Board](#trello-board)
+  * [Future Development](#future-development)
 
 
 # What is the Problem and how will it be resolved?
@@ -202,3 +203,9 @@ The scheme has grown since I designed this ERD.  Namely, we now have additional 
 The live Trello board can be seen here: https://trello.com/b/R1Y4HQ3q/farm-to-table
 
 ![Trello Board](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Screen+Shot+2018-05-10+at+19.16.35.png "Trello")
+
+# Future Development
+
+Over the next 4 weeks, I intend to make some revisions to this project.  I will be adding the functionality for a shopping cart, so users can buy more than one product - from numerous sellers.  I still want to retain the Stripe Connect functionality - which allows the disbursement of funds to th appropriate owner of the product sold.  In addition, my CSS styling is a bit rough around the edges - so I intend to replace some grid templates with flex boxes for optimised viewing in both desktop and mobile views.  
+
+These additions will be visible on Git and Heroku with added documentation where necessery.
