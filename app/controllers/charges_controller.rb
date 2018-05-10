@@ -11,6 +11,7 @@ class ChargesController < ApplicationController
         @quantity = params[:quantity]
         @quantity = @quantity.to_i
         @amount = ((@product.price) * @quantity + @product.shipping) * 100
+        @amount = @amount.to_i
         @token = params[:stripeToken]
         
         application_fee = (@amount * 0.05).to_i
