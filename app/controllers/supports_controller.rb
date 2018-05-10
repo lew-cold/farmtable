@@ -12,15 +12,15 @@ class SupportsController < ApplicationController
         if verify_recaptcha(model: @support)
             if @support.valid?
                 SupportMailer.with(support: @support).support_email.deliver_now
-                redirect_to root_path
                 flash[:notice] = "We have received your message and will be in touch soon!"
+                redirect_to root_url
             else
                 flash[:notice] = "There was an error sending your message. Please try again."
-                render :new
+                redirect_to new_support_url
             end
         else
             flash[:notice] = "You need to verify you're a human!"
-            render :new
+            redirect_to new_support_url
         end
     end
 
