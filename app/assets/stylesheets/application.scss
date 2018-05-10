@@ -14,7 +14,7 @@
  *= require_self
  */
 
-// @import "navbar";
+// @import "navbar"
 .messages {
     max-height: 400px;
     overflow-y: auto;
@@ -101,5 +101,9 @@ footer {
     }
     .mes_list {
         // word-wrap: break-word;
+    }
+    .mobsearch {
+        display: block;
+        text-align: center;
     }
 }

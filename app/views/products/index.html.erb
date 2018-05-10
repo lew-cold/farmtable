@@ -1,5 +1,10 @@
 <%= content_for :title do %> Products <% end %>
-
+ <div class="mobsearch">
+            <%= form_tag(products_path, :method => "get") do %>
+            <%= text_field_tag :search, params[:search], placeholder: "Search Products" %>
+            <%= submit_tag "Search", :name => nil %>
+            <% end %>
+  </div>
 <%= render "layouts/sidecat" %>
 
 <div class="product_grid">

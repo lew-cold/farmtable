@@ -36,6 +36,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
+    # authorize! :create, @product
     @product = Product.new
   end
 
@@ -62,7 +63,7 @@ class ProductsController < ApplicationController
         end
       end
     else
-      redirect_to profiles_url, notice: 'You have not connected a stripe account.  Connect now and start selling today!'
+      redirect_to profiles_url, notice: 'You have not connected a stripe account.  Go to "profiles" > "View More" on your profile > "Connect to Stripe"'
     end
   end
 

@@ -76,6 +76,8 @@
     
     .links {
         font-family: bevan;
+        margin-left: 5%;
+        ;
     }
     
     .links a {
@@ -83,4 +85,8 @@
         font-size: 15px;
         color: #457A2E;
         display: block;
+    }
+    
+    .mobsearch {
+        display: none;
     }
