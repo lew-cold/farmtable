@@ -2,7 +2,7 @@
 
 Completed as a major assessment in [Coder Academy's](https://coderacademy.edu.au/) Fast Track Bootcamp.
 
-View live: https://farmtable.herokuapp.com/
+View live: www.farmtotable.ml OR farmtable.herokuapp.com
 
 # Table of Contents
 
