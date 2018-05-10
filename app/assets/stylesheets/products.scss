@@ -1,55 +1,86 @@
-// Place all the styles related to the Products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-.edit a {
-    background-color: #E6FAFC;
-    color: #457A2E;
-    font-weight: bolder;
-}
-
-.products {
-    text-align: center;
-}
-
-ul {
-    width: 50%;
-    margin: auto;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-.product_grid {
-    display: grid;
-    grid-template-columns: repeat(3, 0.5fr);
-    margin-left: 30%;
-}
-
-.product_holder {
-    border: 1px solid grey;
-    margin: 5%;
-    text-align: center;
-    // width: 100%;
-    // height: 100%;
-    // margin-right: 10%;
-    // margin-left: 10%;
-}
-
-img {
-    width: 180px;
-    height: 180px;
-}
-
-.prod_image img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 300px;
-}
+    // Place all the styles related to the Products controller here.
+    // They will automatically be included in application.css.
+    // You can use Sass (SCSS) here: http://sass-lang.com/
+    .edit a {
+        background-color: #E6FAFC;
+        color: #457A2E;
+        font-weight: bolder;
+    }
+    
+    .products {
+        text-align: center;
+    }
+    
+    ul {
+        width: 50%;
+        margin: auto;
+    }
+    
+    hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid #ccc;
+        margin: 1em 0;
+        padding: 0;
+    }
+    
+    .product_grid {
+        display: grid;
+        grid-template-columns: repeat(3, 0.5fr);
+        margin-left: 30%;
+    }
+    
+    .product_holder {
+        border: 1px solid grey;
+        margin: 5%;
+        text-align: center;
+        // width: 100%;
+        // height: 100%;
+        // margin-right: 10%;
+        // margin-left: 10%;
+    }
+    
+    img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .prod_image img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        height: 300px;
+    }
+    
+    .sidenav {
+        height: 100%;
+        /* Full-height: remove this if you want "auto" height */
+        width: 20%;
+        /* Set the width of the sidebar */
+        position: fixed;
+        /* Fixed Sidebar (stay in place on scroll) */
+        z-index: 1;
+        /* Stay on top */
+        top: 10%;
+        /* Stay at the top */
+        left: 0;
+        background-color: #E6FAFC;
+        /* Black */
+        overflow-x: hidden;
+        /* Disable horizontal scroll */
+        padding-top: 20%;
+        padding-bottom: 30%;
+    }
+    
+    .links {
+        font-family: bevan;
+    }
+    
+    .links a {
+        text-decoration: none;
+        font-size: 15px;
+        color: #457A2E;
+        display: block;
+    }

@@ -9,12 +9,18 @@
     <link href="https://fonts.googleapis.com/css?family=Bevan|Pontano+Sans" rel="stylesheet">
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width" />
 
 
   </head>
 
   <body>
   <%= render "layouts/navbar" %>
+  <%# RESOLVE POSITIONING OF NOTICE %>
+    <div class="alerts">
+     <p class="notice"><%= notice %></p>
+     <p class="alert"><%= alert %></p>
+    </div>
     <%= yield %>
   </body>
 </html>

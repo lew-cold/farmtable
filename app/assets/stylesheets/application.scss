@@ -32,11 +32,6 @@
     box-sizing: border-box;
 }
 
-*:before,
-*:after {
-    box-sizing: inherit;
-}
-
 body {
     font-family: 'Pontano Sans', sans-serif;
     font-size: 20px;
@@ -56,4 +51,45 @@ body {
 footer {
     text-align: center;
     font-size: 0.75rem;
+}
+
+@media only screen and (max-width: 700px) {
+    h2 {
+        padding: 10%;
+        font-size: 5vw;
+        // width: inherit;
+        margin-top: -1%;
+    }
+    .container {
+        display: none;
+    }
+    .mobnav {
+        display: block;
+        // padding-block-end: 10%;
+    }
+    .topbanner {
+        display: none;
+    }
+    .product_grid {
+        display: grid;
+        grid-template-columns: repeat(1, 0.5fr);
+        margin-left: 0%;
+    }
+    header {
+        padding-bottom: 30%;
+    }
+    .profile_grid {
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        margin-left: 0%;
+    }
+    .titles {
+        font-size: 8vw;
+    }
+    .float_text {
+        font-size: 5vw;
+    }
+    .sidenav {
+        display: none;
+    }
 }

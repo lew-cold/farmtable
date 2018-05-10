@@ -1,0 +1,14 @@
+<div class="sidenav">
+    <div class="links">
+    <h3><u>Categories</u></h3>
+        <% Product::CATEGORIES.each do |cat| %>
+      <p><%= link_to cat, :search => cat %></p>
+      <% end %>
+      
+    
+
+
+
+
+    </div>
+</div>

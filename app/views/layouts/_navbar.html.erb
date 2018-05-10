@@ -31,31 +31,31 @@
 
 <div class="mobnav">
 
-<nav role="navigation">
+  <nav role="navigation">
 
-  <div id="menuToggle">
-   
-    <input type="checkbox"/>
-    <span></span>
-    <span></span>
-    <span></span>
+    <div id="menuToggle">
     
-    <ul id="menu">
-        <li><%= link_to "Home", root_path %>
-        <li><%= link_to "Products", products_path %>
-        <li><%= link_to "Messages",   conversations_path %>
-        <li><%= link_to "Profiles", profiles_path %>
-        <li><%= link_to "Support", new_support_path %>        
-        <li><% if user_signed_in? %>
-                <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "devise" %>        
-              <% else %>
-                <%= link_to "Login", new_user_session_path, class: "devise" %>  
-            <% end %></li>
-    </ul>
-  </div>
-<h1 class="center">FarmToTable&trade;</h1>
-</nav>
-
+      <input type="checkbox"/>
+      <span></span>
+      <span></span>
+      <span></span>
+      
+      <ul id="menu">
+          <li><%= link_to "Home", root_path %>
+          <li><%= link_to "Products", products_path %>
+          <li><%= link_to "Messages",   conversations_path %>
+          <li><%= link_to "Profiles", profiles_path %>
+          <li><%= link_to "Support", new_support_path %>        
+          <li><% if user_signed_in? %>
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete %>        
+                <% else %>
+                  <%= link_to "Login", new_user_session_path %>  
+              <% end %></li>
+      </ul>
+    </div>
+    
+  </nav>
+  <h2 class="mobtitle"><%= yield :title %></h2>
 </div>
 
 </header>
@@ -63,15 +63,6 @@
 
 
   <div class="topbanner">
-  <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Rectangle+3.png">
+  <img src="https://s3.us-east-2.amazonaws.com/farmtable/assets/Rectangle+3.jpg">
 <h2><%= yield :title %></h2>
   </div>
-
-
-
-
-<%# RESOLVE POSITIONING OF NOTICE %>
-    <div class="alerts">
-     <p class="notice"><%= notice %></p>
-     <p class="alert"><%= alert %></p>
-    </div>
