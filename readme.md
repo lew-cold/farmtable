@@ -2,6 +2,22 @@
 
 # Table of Contents
 
+  * [What is the Problem and how will it be resolved?](#What-is-the-Problem-and-how-will-it-be-resolved-)
+    + [The Problem](#the-problem)
+      - [Why is there a strong demand to buy direct from the farmers/primary producers?](#Why-is-there-a-strong-demand-to-buy-direct-from-the-farmers/primary-producers-)
+      - [Why online all of a sudden?](#Why-online-all-of-a-sudden-)
+      - [Isn't there already existing solutions in place?](#Isn't-there-already-existing-solutions-in-place-)
+      - [What's wrong with the sites that already exist?](#what-s-wrong-with-the-sites-that-already-exist-)
+      - [Do you think Australia needs this solution?](Do-you-think-Australia-needs-this-solution-)
+    + [The Solution](#the-solution)
+  * [User Stories](#user-stories)
+    + [Preliminary User Stories](#preliminary-user-stories)
+    + [Detailed User Stories](#detailed-user-stories)
+  * [Workflow](#workflow)
+  * [Style Guide](#style-guide)
+  * [Wireframes](#wireframes)
+  * [ERD](#erd)
+  * [Trello Board](#trello-board)
 
 
 # What is the Problem and how will it be resolved?
@@ -135,8 +151,50 @@ I then wanted to pair it with a clean, easy to read body text.  I chose 'Pontana
 
 Like with the font choice, I wanted to ensure the natural feel fell through to the colour scheme too.  This is why I've gone with shades of green for my content and content-holders and then baby blue to colour my background.
 
-# Wireframe
+# Wireframes
 
-# Entity Relationship Diagram (ERD)
+My wireframes look quite like the finished product wth a few modifications.  Due to time constraints at the time, I was unable to deploy some features as I wished.  This will be rectified in the immediate future and I will update this doc at that time.
+
+**Home Page:**
+
+![Home Page Wireframe](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_home.jpg "Home Page")
+
+**Products List:**
+
+![Product List Wireframe](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_products.jpg "Product List")
+
+**View Product:**
+
+![View Product Wireframe](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_productview.jpg "View Product")
+
+**Messages:**
+
+![Messages wireframe](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_message.jpg "Messages")
+
+**View Profile:**
+
+![View Profile wireframe](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_profile.jpg "View Profile")
+
+**Login:**
+
+![Login](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_login.jpg "Login")
+
+**Mobile View Product List:**
+
+![Mobile Product List](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/chat_obile.jpg "Mobile Product List")
+
+**Mobile View Product View:**
+
+![Mobile View Product](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Desktop_profile.jpg "Mobile View Product" )
+
+# ERD
+
+The scheme has grown since I designed this ERD.  Namely, we now have additional tables to facilitate the instant messaging function.  This created 3 tables to handle conversations and folders (housekeeping).
 
 ![ERD](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/erd.png "ERD")
+
+# Trello Board
+
+The live Trello board can be seen here: https://trello.com/b/R1Y4HQ3q/farm-to-table
+
+![Trello Board](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Screen+Shot+2018-05-10+at+19.16.35.png "Trello")
