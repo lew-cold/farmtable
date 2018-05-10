@@ -209,7 +209,7 @@ The live Trello board can be seen here: https://trello.com/b/R1Y4HQ3q/farm-to-ta
 
 During the build process there were a few stages that required help from third parties.  I decided to have my code reviewed and vice versa.
 
-Flexbox - Nav Bar (desktop), this was reviewed by Hadi (Hadi Khalili Git Hub here).
+Flexbox - Nav Bar (desktop), this was reviewed by Hadi (https://github.com/hdkhalili).
 Homepage - Margins (desktop), this was reviewed by James (https://github.com/JamesApple)
 
 # Future Development
