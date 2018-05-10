@@ -22,6 +22,7 @@ View live: www.farmtotable.ml OR farmtable.herokuapp.com
   * [Wireframes](#wireframes)
   * [ERD](#erd)
   * [Trello Board](#trello-board)
+  * [Code Reviews](#code-reviews)
   * [Future Development](#future-development)
 
 
@@ -203,6 +204,13 @@ The scheme has grown since I designed this ERD.  Namely, we now have additional 
 The live Trello board can be seen here: https://trello.com/b/R1Y4HQ3q/farm-to-table
 
 ![Trello Board](https://s3.us-east-2.amazonaws.com/farmtable/readme_assets/Screen+Shot+2018-05-10+at+19.16.35.png "Trello")
+
+# Code Reviews
+
+During the build process there were a few stages that required help from third parties.  I decided to have my code reviewed and vice versa.
+
+Flexbox - Nav Bar (desktop), this was reviewed by Hadi (Hadi Khalili Git Hub here).
+Homepage - Margins (desktop), this was reviewed by James (https://github.com/JamesApple)
 
 # Future Development
 
