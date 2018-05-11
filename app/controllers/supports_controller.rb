@@ -14,14 +14,14 @@ class SupportsController < ApplicationController
             if @support.valid?
                 SupportMailer.with(support: @support).support_email.deliver_now
                 flash[:notice] = "We have received your message and will be in touch soon!"
-                redirect_to root_url
+                redirect_to :action => 'new'
             else
                 flash[:notice] = "There was an error sending your message. Please try again."
-                redirect_to new_support_url
+                redirect_to :action => 'new'
             end
         else
             flash[:notice] = "You need to verify you're a human!"
-            redirect_to new_support_url
+                redirect_to :action => 'new'
         end
     end
 
